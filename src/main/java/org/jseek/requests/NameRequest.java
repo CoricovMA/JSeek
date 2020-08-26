@@ -1,4 +1,10 @@
 package org.jseek.requests;
 
-public class NameRequest {
+import org.jseek.response.IJSeekResponse;
+
+public class NameRequest implements IJSeekRequest {
+    @Override
+    public IJSeekResponse generateResponse() {
+        return null;
+    }
 }

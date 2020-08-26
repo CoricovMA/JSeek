@@ -1,4 +1,16 @@
 package org.jseek.requests;
 
-public class JobRequest {
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import org.jseek.response.IJSeekResponse;
+
+public class JobRequest implements IJSeekRequest {
+
+    public JobRequest(MessageReceivedEvent event){
+
+    }
+
+    @Override
+    public IJSeekResponse generateResponse() {
+        return null;
+    }
 }

@@ -1,4 +1,4 @@
-package org.jseek.interfaces;
+package org.jseek.commands;
 
 public interface ICommand {
 
