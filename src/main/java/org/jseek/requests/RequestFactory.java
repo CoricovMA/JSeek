@@ -9,10 +9,10 @@ public class RequestFactory {
     }
 
     private static String getRequestType(String messageString){
-        try{
+            try{
 
-        }catch (){
-            
-        }
+            }catch (){
+
+            }
     }
 }
