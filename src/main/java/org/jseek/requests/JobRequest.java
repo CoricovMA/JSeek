@@ -10,6 +10,11 @@ public class JobRequest implements IJSeekRequest {
     }
 
     @Override
+    public void createRequest() {
+
+    }
+
+    @Override
     public IJSeekResponse generateResponse() {
         return null;
     }

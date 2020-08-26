@@ -5,6 +5,8 @@ import org.jseek.response.IJSeekResponse;
 
 public interface IJSeekRequest {
 
+    void createRequest();
+
     IJSeekResponse generateResponse();
 
 }

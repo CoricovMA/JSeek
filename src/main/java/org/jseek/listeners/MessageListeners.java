@@ -14,11 +14,12 @@ public class MessageListeners extends ListenerAdapter {
         }
         Message msg = event.getMessage();
         MessageChannel channel = event.getChannel();
-        if(event.getAuthor().getName().equalsIgnoreCase("mando") || event.getAuthor().getName().equalsIgnoreCase("hydroo")){
-            channel.sendMessage(String.format("@%s, bro. Get a job.", event.getAuthor().getName())).queue();
-        }else{
-            System.out.println(msg.getContentRaw());
-        }
+        channel.sendMessage("leggo").queue();
+//        if(event.getAuthor().getName().equalsIgnoreCase("mando") || event.getAuthor().getName().equalsIgnoreCase("hydroo")){
+//            channel.sendMessage(String.format("@%s, bro. Get a job.", event.getAuthor().getName())).queue();
+//        }else{
+//            System.out.println(msg.getContentRaw());
+//        }
     }
 
 
