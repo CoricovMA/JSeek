@@ -4,26 +4,23 @@ import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jseek.requests.IJSeekRequest;
+import org.jseek.requests.RequestFactory;
+import org.jseek.response.IJSeekResponse;
 
 public class MessageListeners extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event){
-        if(isSelf(event)){
+        if(event.getAuthor().isBot()){
             return;
         }
-        Message msg = event.getMessage();
+
+        IJSeekRequest request = RequestFactory.createRequest(event);
+        IJSeekResponse response = request.generateResponse();
+
         MessageChannel channel = event.getChannel();
-        channel.sendMessage("leggo").queue();
-//        if(event.getAuthor().getName().equalsIgnoreCase("mando") || event.getAuthor().getName().equalsIgnoreCase("hydroo")){
-//            channel.sendMessage(String.format("@%s, bro. Get a job.", event.getAuthor().getName())).queue();
-//        }else{
-//            System.out.println(msg.getContentRaw());
-//        }
+
     }
 
-
-    private boolean isSelf(MessageReceivedEvent event){
-        return event.getAuthor().getName().equalsIgnoreCase("JSeek");
-    }
 }

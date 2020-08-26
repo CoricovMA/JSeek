@@ -3,10 +3,12 @@ package org.jseek.requests;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.response.IJSeekResponse;
 
-public interface IJSeekRequest {
+public abstract class IJSeekRequest {
+    
+    IJSeekRequest(){};
 
-    void createRequest();
-
-    IJSeekResponse generateResponse();
+    IJSeekResponse generateResponse() {
+        return null;
+    }
 
 }
