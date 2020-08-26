@@ -2,8 +2,11 @@ package org.jseek.response;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
-public interface IJSeekResponse {
+public abstract class IJSeekResponse {
 
-    void send(MessageReceivedEvent event);
+
+    void send(MessageReceivedEvent event) {
+        event.getChannel().sendMessage("This send method has not yet been implemented").queue();
+    }
 
 }

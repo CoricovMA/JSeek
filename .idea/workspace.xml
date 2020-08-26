@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/IJSeekRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/IJSeekRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/util/MessageParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/util/MessageParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -100,10 +101,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="184" key="#Project_Structure/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598391945447" />
-    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1598482419023">
+    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1598483907081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598482419023" />
+    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598483907081" />
     <state x="2875" y="238" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598361976843" />
     <state x="1204" y="161" key="#xdebugger.evaluate" timestamp="1598477494080">
       <screen x="0" y="0" width="1920" height="1050" />
