@@ -16,6 +16,8 @@ public class MessageListeners extends ListenerAdapter {
         MessageChannel channel = event.getChannel();
         if(event.getAuthor().getName().equalsIgnoreCase("mando") || event.getAuthor().getName().equalsIgnoreCase("hydroo")){
             channel.sendMessage(String.format("@%s, bro. Get a job.", event.getAuthor().getName())).queue();
+        }else{
+            System.out.println(msg.getContentRaw());
         }
     }
 
