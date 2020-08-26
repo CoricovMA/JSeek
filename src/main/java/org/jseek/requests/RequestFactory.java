@@ -11,9 +11,18 @@ public class RequestFactory {
             requestType = getRequestType(event.getMessage().getContentRaw());
         }catch (NoRequestFoundException e){
             event.getChannel().sendMessage(e.getMessage());
+            return null;
         }
 
-        
+        switch(requestType){
+            case "job":
+                return new JobRequest(event);
+            case "info":
+                return new InfoRequest(event);
+            default:
+                return null;
+        }
+
     }
 
     private static String getRequestType(String messageString) throws NoRequestFoundException {
