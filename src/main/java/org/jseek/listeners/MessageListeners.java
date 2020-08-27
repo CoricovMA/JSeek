@@ -1,12 +1,10 @@
 package org.jseek.listeners;
 
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jseek.errors.NoRequestFoundException;
 import org.jseek.requests.IJSeekRequest;
 import org.jseek.requests.RequestFactory;
-import org.jseek.response.IJSeekResponse;
 
 public class MessageListeners extends ListenerAdapter {
 
@@ -17,9 +15,12 @@ public class MessageListeners extends ListenerAdapter {
         }
 
         IJSeekRequest request = RequestFactory.createRequest(event);
-        IJSeekResponse response = request.generateResponse();
 
-        MessageChannel channel = event.getChannel();
+        try {
+            request.generateResponse().send();
+        } catch (NoRequestFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 

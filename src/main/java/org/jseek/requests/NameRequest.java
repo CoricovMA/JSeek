@@ -1,13 +1,13 @@
 package org.jseek.requests;
 
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.response.IJSeekResponse;
 
-public class NameRequest implements IJSeekRequest {
+public class NameRequest extends IJSeekRequest {
 
 
-    @Override
-    public void createRequest() {
-
+    NameRequest(MessageReceivedEvent event) {
+        super(event);
     }
 
     @Override
