@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +28,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Program Files/apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:/Program Files/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -67,6 +64,18 @@
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
