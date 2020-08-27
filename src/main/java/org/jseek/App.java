@@ -1,11 +1,7 @@
 package org.jseek;
 
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import org.jseek.listeners.MessageListeners;
-
-import javax.security.auth.login.LoginException;
+import org.jseek.config.JSeekConfig;
 
 public class App extends ListenerAdapter {
     public static void main( String[] args ) {
@@ -20,7 +16,9 @@ public class App extends ListenerAdapter {
 //            e.printStackTrace();e.printStackTrace();
 //        }
 
-        System.out.println();
-
+        for(String key: JSeekConfig.getInstance().getProperties().keySet()){
+            System.out.println(key);
+            System.out.println(JSeekConfig.getInstance().getProperties().get(key));
+        }
     }
 }
