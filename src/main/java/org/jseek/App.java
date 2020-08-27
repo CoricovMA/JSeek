@@ -8,20 +8,19 @@ import org.jseek.listeners.MessageListeners;
 import javax.security.auth.login.LoginException;
 
 public class App extends ListenerAdapter {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
 
-        System.out.println(System.getenv("DISC_BOT_KEY"));
+//        System.out.println(System.getenv("DISC_BOT_KEY"));
+//
+//        try {
+//            JDA jda = JDABuilder.createDefault(System.getenv("DISC_BOT_KEY"))
+//                    .addEventListeners(new MessageListeners())
+//                    .build();
+//        } catch (LoginException e) {
+//            e.printStackTrace();e.printStackTrace();
+//        }
 
-        try {
-            JDA jda = JDABuilder.createDefault(System.getenv("DISC_BOT_KEY"))
-                    .addEventListeners(new MessageListeners())
-                    .build();
-        } catch (LoginException e) {
-            e.printStackTrace();e.printStackTrace();
-        }
+        System.out.println();
 
     }
-
-
 }

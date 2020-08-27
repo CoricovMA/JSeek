@@ -1,15 +1,31 @@
 package org.jseek.config;
 
-public enum JSeekConfig {
+import sun.jvm.hotspot.oops.ObjArrayKlass;
 
-    AVAILABLE_COMMANDS("commands", (Object) new String[]{"info", "job"});
+import java.util.HashMap;
+import java.util.Map;
 
-    private String key;
-    private Object value;
+public class JSeekConfig {
 
-    JSeekConfig(String key, Object... value){
-        this.key = key;
-        this.value = value;
+    public static Map<String, Object> configs = new HashMap<>();
+
+    public enum Property{
+        AVAILABLE_COMMANDS("commands","Available Commands", (Object) new String[]{"info", "job"});
+
+        private String key;
+        private String description;
+        private Object value;
+
+        Property(String key, String description, Object... value){
+            this.key = key;
+            this.value = value;
+            this.description = description;
+            configs.put(key, value);
+        }
+
+        public Object getValue() {
+            return value;
+        }
     }
 
 }

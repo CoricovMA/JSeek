@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jseek/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jseek/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="autoscrollToSource" value="true" />
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,7 +27,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/Program Files/apache-maven-3.6.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Program Files/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -65,18 +64,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -109,24 +96,28 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="412" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598486093175" />
-    <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1598486853152">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1598536417683">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
     <state width="1877" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598486853152" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="326" key="GridCell.Tab.0.center" timestamp="1598486853152">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1598536417683">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
     <state width="1877" height="326" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598486853152" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="326" key="GridCell.Tab.0.left" timestamp="1598486853152">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1598536417683">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
     <state width="1877" height="326" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598486853152" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="326" key="GridCell.Tab.0.right" timestamp="1598486853152">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1598536417683">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
     <state width="1877" height="326" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598486853152" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
     <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1598486827890">
