@@ -1,5 +1,6 @@
 package org.jseek.response;
 
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.requests.IJSeekRequest;
 
@@ -7,6 +8,7 @@ public abstract class IJSeekResponse {
 
     private MessageReceivedEvent event;
     private IJSeekRequest parentRequest;
+    private EmbedBuilder eb = new EmbedBuilder();
 
     IJSeekResponse(MessageReceivedEvent event){
         this.event = event;
@@ -30,5 +32,9 @@ public abstract class IJSeekResponse {
 
     public IJSeekRequest getParentRequest(){
         return this.parentRequest;
+    }
+
+    public EmbedBuilder getEmbedBuilder(){
+        return this.eb;
     }
 }

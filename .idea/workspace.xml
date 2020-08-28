@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" afterDir="false" />
     </list>
@@ -109,29 +109,29 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622121739" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1598622534641">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1598632279647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622534641" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598632279647" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1598622534640">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1598632279647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622534640" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598632279647" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1598622534640">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1598632279647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622534640" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598632279647" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1598622534640">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1598632279647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622534640" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598632279647" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
     <state width="1877" height="264" key="GridCell.Tab.1.bottom" timestamp="1598622139145">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -201,12 +201,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java</url>
-          <line>31</line>
+          <line>40</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java</url>
-          <line>20</line>
+          <line>24</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

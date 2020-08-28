@@ -21,6 +21,8 @@ public class MessageListeners extends ListenerAdapter {
             request.generateResponse().send();
         } catch (NoRequestFoundException e) {
 
+        } catch (NullPointerException npe){
+
         }
 
     }

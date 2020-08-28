@@ -1,7 +1,11 @@
 package org.jseek.response;
 
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.config.JSeekConfig;
+
+import java.awt.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class InfoResponse extends IJSeekResponse {
 
@@ -29,6 +33,11 @@ public class InfoResponse extends IJSeekResponse {
     }
 
     private void sendSimpleResponse(){
+        EmbedBuilder eb = this.getEmbedBuilder();
+        eb.setAuthor("JSeek");
+        eb.setDescription("Available Commands");
+        eb.setColor(getRandColor());
+
         StringBuilder sb = new StringBuilder();
         sb.append("Available Commands: \n");
 
@@ -55,5 +64,13 @@ public class InfoResponse extends IJSeekResponse {
         }
     }
 
+    private Color getRandColor(){
+        ThreadLocalRandom thrd = ThreadLocalRandom.current();
+        int first = thrd.nextInt(0, 256);
+        int second = thrd.nextInt(0, 256);
+        int third = thrd.nextInt(0, 256);
+
+        return new Color(first, second, third);
+    }
 
 }
