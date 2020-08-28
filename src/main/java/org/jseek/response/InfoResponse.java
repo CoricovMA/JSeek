@@ -32,7 +32,7 @@ public class InfoResponse extends IJSeekResponse {
     }
 
     public void setReqType(InfoRequestType reqType){
-        
+
     }
 
 }
