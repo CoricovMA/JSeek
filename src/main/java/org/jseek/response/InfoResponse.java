@@ -38,15 +38,15 @@ public class InfoResponse extends IJSeekResponse {
         eb.setDescription("Available Commands");
         eb.setColor(getRandColor());
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Available Commands: \n");
-
-        setCommands(sb);
-
-        sb.append("For more information on a command: ```jseek \"command\" help```For Example: " +
-                "```jseek info help```");
-
-        this.getEvent().getChannel().sendMessage(sb.toString()).queue();
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("Available Commands: \n");
+//
+//        setCommands(sb);
+//
+//        sb.append("For more information on a command: ```jseek \"command\" help```For Example: " +
+//                "```jseek info help```");
+//
+//        this.getEvent().getChannel().sendMessage(sb.toString()).queue();
     }
 
     private void sendSpecificRequest(){
@@ -55,6 +55,13 @@ public class InfoResponse extends IJSeekResponse {
 
     public void setReqType(InfoRequestType reqType){
         this.reqType = reqType;
+    }
+
+    private void setCommandsEmbed(EmbedBuilder eb){
+        String [] availableCommands = (String [])JSeekConfig.getInstance().getProperties().get("commands");
+        for(int i = 0; i < availableCommands.length; i++){
+            // TODO ADD FIELDS HERE
+        }
     }
 
     private void setCommands(StringBuilder stringBuilder){
