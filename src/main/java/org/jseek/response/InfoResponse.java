@@ -3,7 +3,12 @@ package org.jseek.response;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class InfoResponse extends IJSeekResponse {
-    
+
+    public enum InfoRequestType{
+        SIMPLE,
+        SPECIFIC
+    }
+
     public InfoResponse(MessageReceivedEvent event) {
         super(event);
     }
