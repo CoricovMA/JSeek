@@ -9,6 +9,7 @@ import org.jseek.response.InfoResponse;
 public class InfoRequest extends IJSeekRequest {
 
     private InfoResponse infoResponse;
+    private String [] elements;
 
     public InfoRequest(MessageReceivedEvent event) {
         super(event);
@@ -17,16 +18,20 @@ public class InfoRequest extends IJSeekRequest {
     @Override
     public IJSeekResponse generateResponse() throws NoRequestFoundException {
         infoResponse = new InfoResponse(this.getEvent());
+        infoResponse.setParentRequest(this);
         parseRequestType();
 
         return infoResponse;
     }
 
     private void parseRequestType(){
-        String [] elements = getEvent().getMessage().getContentRaw().split(" ");
+        elements = getEvent().getMessage().getContentRaw().split(" ");
         if(elements.length == 2){
+
             infoResponse.setReqType(InfoResponse.InfoRequestType.SIMPLE);
+
         }else{
+
             String potentialCommand = elements[2];
             for(String command : (String[]) JSeekConfig.getInstance().getProperties().get("commands")){
                 if(potentialCommand.equalsIgnoreCase(command)){
@@ -35,6 +40,10 @@ public class InfoRequest extends IJSeekRequest {
                 }
             }
         }
+    }
+
+    public String[] getElements(){
+        return this.elements;
     }
 
 }

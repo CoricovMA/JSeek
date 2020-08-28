@@ -30,12 +30,12 @@ public class InfoResponse extends IJSeekResponse {
 
     private void sendSimpleResponse(){
         StringBuilder sb = new StringBuilder();
-        String [] availableCommands = (String [])JSeekConfig.getInstance().getProperties().get("commands");
         sb.append("Available Commands: \n");
 
-        for(int i = 0; i < availableCommands.length; i++){
-            sb.append(String.format("%s %s",i ,availableCommands[i]));
-        }
+        setCommands(sb);
+
+        sb.append("For more information on a command: ```jseek \"command\" help```For Example: " +
+                "```jseek info help```");
 
         this.getEvent().getChannel().sendMessage(sb.toString()).queue();
     }
@@ -45,7 +45,15 @@ public class InfoResponse extends IJSeekResponse {
     }
 
     public void setReqType(InfoRequestType reqType){
-
+        this.reqType = reqType;
     }
+
+    private void setCommands(StringBuilder stringBuilder){
+        String [] availableCommands = (String [])JSeekConfig.getInstance().getProperties().get("commands");
+        for(int i = 0; i < availableCommands.length; i++){
+            stringBuilder.append(String.format("```%s: %s```",i+1 ,availableCommands[i]));
+        }
+    }
+
 
 }

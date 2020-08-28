@@ -17,9 +17,10 @@ public class MessageListeners extends ListenerAdapter {
         IJSeekRequest request = RequestFactory.createRequest(event);
 
         try {
+            assert request != null;
             request.generateResponse().send();
         } catch (NoRequestFoundException e) {
-            e.printStackTrace();
+
         }
 
     }
