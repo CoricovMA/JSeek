@@ -10,7 +10,7 @@ public class JSeekConfig {
     private static JSeekConfig instance;
 
     public enum Property{
-        AVAILABLE_COMMANDS("commands","Available Commands", Arrays.toString(new String[]{"info", "job"}));
+        AVAILABLE_COMMANDS("commands","Available Commands", new String[]{"info", "job"});
 
         private String key;
         private String description;
