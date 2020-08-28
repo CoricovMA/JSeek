@@ -4,6 +4,8 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public class InfoResponse extends IJSeekResponse {
 
+    private InfoRequestType reqType;
+
     public enum InfoRequestType{
         SIMPLE,
         SPECIFIC
@@ -21,11 +23,16 @@ public class InfoResponse extends IJSeekResponse {
     public void setCommandInfoResponse(String commandInfo){
     }
 
-    private void checkBasicRequest(){
+    private void sendSimpleResponse(){
 
     }
 
+    private void sendSpecificRequest(){
 
+    }
 
+    public void setReqType(InfoRequestType reqType){
+        
+    }
 
 }
