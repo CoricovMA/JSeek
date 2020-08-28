@@ -7,6 +7,8 @@ import org.jseek.response.InfoResponse;
 
 public class InfoRequest extends IJSeekRequest {
 
+    private String typeToSet;
+    private InfoResponse infoResponse;
 
     public InfoRequest(MessageReceivedEvent event) {
         super(event);
@@ -16,4 +18,10 @@ public class InfoRequest extends IJSeekRequest {
     public IJSeekResponse generateResponse() throws NoRequestFoundException {
         return new InfoResponse(this.getEvent());
     }
+
+    private void parseRequestType(){
+        String [] elements = getEvent().getMessage().getContentRaw().split(" ");
+
+    }
+
 }

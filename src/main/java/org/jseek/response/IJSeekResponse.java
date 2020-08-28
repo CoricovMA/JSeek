@@ -4,7 +4,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 public abstract class IJSeekResponse {
 
-    private final MessageReceivedEvent event;
+    private MessageReceivedEvent event;
 
     IJSeekResponse(MessageReceivedEvent event){
         this.event = event;
@@ -16,6 +16,10 @@ public abstract class IJSeekResponse {
 
     protected MessageReceivedEvent getEvent(){
         return this.event;
+    }
+
+    protected void setEvent(MessageReceivedEvent event){
+        this.event = event;
     }
 
 }
