@@ -29,15 +29,15 @@ public class InfoResponse extends IJSeekResponse {
         }
     }
 
-    public void setCommandInfoResponse(String commandInfo){
-    }
-
     private void sendSimpleResponse(){
         EmbedBuilder eb = this.getEmbedBuilder();
         eb.setAuthor("JSeek");
-        eb.setDescription("Available Commands");
         eb.setColor(getRandColor());
-
+        setCommandsEmbed(eb);
+        eb.addField("test", "test text", false);
+        eb.addBlankField(false);
+        eb.setFooter("testFooter");
+        this.getEvent().getChannel().sendMessage(eb.build()).queue();
 //        StringBuilder sb = new StringBuilder();
 //        sb.append("Available Commands: \n");
 //
@@ -53,15 +53,18 @@ public class InfoResponse extends IJSeekResponse {
 
     }
 
+
     public void setReqType(InfoRequestType reqType){
         this.reqType = reqType;
     }
 
     private void setCommandsEmbed(EmbedBuilder eb){
         String [] availableCommands = (String [])JSeekConfig.getInstance().getProperties().get("commands");
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < availableCommands.length; i++){
-            // TODO ADD FIELDS HERE
+            sb.append(String.format("```%s```", availableCommands[i]));
         }
+        eb.setDescription(sb.toString());
     }
 
     private void setCommands(StringBuilder stringBuilder){
