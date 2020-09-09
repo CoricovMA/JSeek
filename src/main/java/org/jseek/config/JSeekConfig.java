@@ -10,7 +10,11 @@ public class JSeekConfig {
     private static JSeekConfig instance;
 
     public enum Property{
-        AVAILABLE_COMMANDS("commands","Available Commands", new String[]{"info", "job"});
+        AVAILABLE_COMMANDS("commands","Available Commands", new String[]{"info", "job"}),
+        INFO_COMMAND("info", "The info command returns information about all available commands, or a specific command.\n\n" +
+                "For example: ```jseek info <command name>```\n" +
+                "or: ```jseek info```", ""),
+        JOB_COMMAND("job", "The Job command returns a given number of found jobs, for a requested keyword(s).", "");
 
         private String key;
         private String description;
@@ -30,6 +34,8 @@ public class JSeekConfig {
 
     private JSeekConfig(){
         configs.put(Property.AVAILABLE_COMMANDS.key, Property.AVAILABLE_COMMANDS.value);
+        configs.put(Property.INFO_COMMAND.key, Property.INFO_COMMAND.description);
+        configs.put(Property.JOB_COMMAND.key, Property.JOB_COMMAND.description);
     }
 
     public static JSeekConfig getInstance(){

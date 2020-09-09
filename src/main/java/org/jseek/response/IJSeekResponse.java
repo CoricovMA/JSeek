@@ -2,6 +2,7 @@ package org.jseek.response;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import org.jseek.config.JSeekConfig;
 import org.jseek.requests.IJSeekRequest;
 
 public abstract class IJSeekResponse {
@@ -9,6 +10,7 @@ public abstract class IJSeekResponse {
     private MessageReceivedEvent event;
     private IJSeekRequest parentRequest;
     private EmbedBuilder eb = new EmbedBuilder();
+    public static String [] availableCommands = (String []) JSeekConfig.getInstance().getProperties().get("commands");
 
     IJSeekResponse(MessageReceivedEvent event){
         this.event = event;
@@ -37,4 +39,5 @@ public abstract class IJSeekResponse {
     public EmbedBuilder getEmbedBuilder(){
         return this.eb;
     }
+
 }
