@@ -4,6 +4,8 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.response.IJSeekResponse;
 import org.jseek.response.JobResponse;
 
+import java.util.List;
+
 public class JobRequest extends IJSeekRequest {
 
     private String requestedJob;
@@ -15,9 +17,11 @@ public class JobRequest extends IJSeekRequest {
     }
 
     @Override
-    public IJSeekResponse generateResponse() {
+    public List<IJSeekResponse> generateResponse() {
         this.setResponse(new JobResponse(this.getEvent()));
         this.getResponse().setParentRequest(this);
+
+
 
         parseRequest();
         return null;
@@ -36,8 +40,8 @@ public class JobRequest extends IJSeekRequest {
     }
 
     private void setLocation(){
-        if(this.getElements().length > 2){
-            this.location = this.getElements()[2];
+        if(this.getElements().length > 3){
+            this.location = this.getElements()[3];
         }else{
             this.location = "montreal";
         }
@@ -45,5 +49,14 @@ public class JobRequest extends IJSeekRequest {
 
     private boolean validateReq(){
         return getElements()[0].trim().equalsIgnoreCase("jseek job");
+    }
+
+
+    public String getRequestedJob() {
+        return requestedJob;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

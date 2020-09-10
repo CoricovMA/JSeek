@@ -6,6 +6,9 @@ import org.jseek.errors.NoRequestFoundException;
 import org.jseek.response.IJSeekResponse;
 import org.jseek.response.InfoResponse;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InfoRequest extends IJSeekRequest {
 
     private InfoResponse infoResponse;
@@ -16,12 +19,15 @@ public class InfoRequest extends IJSeekRequest {
     }
 
     @Override
-    public IJSeekResponse generateResponse() throws NoRequestFoundException {
+    public List<IJSeekResponse> generateResponse() throws NoRequestFoundException {
         infoResponse = new InfoResponse(this.getEvent());
         infoResponse.setParentRequest(this);
         parseRequestType();
 
-        return infoResponse;
+        List<IJSeekResponse> responses = new ArrayList();
+        responses.add(infoResponse);
+
+        return responses;
     }
 
     private void parseRequestType(){
