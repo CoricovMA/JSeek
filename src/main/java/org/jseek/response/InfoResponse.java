@@ -37,19 +37,10 @@ public class InfoResponse extends IJSeekResponse {
         eb.setColor(getRandColor());
         setCommandsEmbed(eb);
         setFields(eb);
-//        eb.addField("test", "test text", false);
         eb.addBlankField(false);
         eb.setFooter(String.format("%s Command", commandName));
         this.getEvent().getChannel().sendMessage(eb.build()).queue();
-//        StringBuilder sb = new StringBuilder();
-//        sb.append("Available Commands: \n");
-//
-//        setCommands(sb);
-//
-//        sb.append("For more information on a command: ```jseek \"command\" help```For Example: " +
-//                "```jseek info help```");
-//
-//        this.getEvent().getChannel().sendMessage(sb.toString()).queue();
+
     }
 
     private void sendSpecificRequest(){

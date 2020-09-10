@@ -7,6 +7,8 @@ import org.jseek.response.IJSeekResponse;
 public abstract class IJSeekRequest {
 
     private MessageReceivedEvent event;
+    private IJSeekResponse response;
+    private String [] elements;
 
     IJSeekRequest(MessageReceivedEvent event){
         this.event = event;
@@ -19,4 +21,21 @@ public abstract class IJSeekRequest {
     public MessageReceivedEvent getEvent(){
         return this.event;
     }
+
+    protected void setResponse(IJSeekResponse response){
+        this.response = response;
+    }
+
+    protected IJSeekResponse getResponse(){
+        return this.response;
+    }
+
+    protected void setElements(String [] elements){
+        this.elements = elements;
+    }
+
+    protected String [] getElements(){
+        return this.elements;
+    }
+
 }
