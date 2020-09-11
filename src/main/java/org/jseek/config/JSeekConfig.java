@@ -15,7 +15,8 @@ public class JSeekConfig {
                 "For example: ```jseek info <command name>```\n" +
                 "or: ```jseek info```", ""),
         JOB_COMMAND("job", "The Job command returns a given number of found jobs, for a requested keyword(s).\n\n" +
-                "For example: ```jseek job \"job title\" \"location\"```", "");
+                "For example: ```jseek job \"job title\" \"location\" \"num results\"```\n" +
+                "Defaults: \n- location: montreal\n-num results: 1", "");
 
         private String key;
         private String description;

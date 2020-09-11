@@ -4,8 +4,6 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.response.IJSeekResponse;
 import org.jseek.response.JobResponse;
 
-import java.util.List;
-
 public class JobRequest extends IJSeekRequest {
 
     private String requestedJob;
@@ -17,7 +15,7 @@ public class JobRequest extends IJSeekRequest {
     }
 
     @Override
-    public List<IJSeekResponse> generateResponse() {
+    public IJSeekResponse generateResponse() {
         this.setResponse(new JobResponse(this.getEvent()));
         this.getResponse().setParentRequest(this);
 

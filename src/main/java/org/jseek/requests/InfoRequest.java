@@ -19,15 +19,12 @@ public class InfoRequest extends IJSeekRequest {
     }
 
     @Override
-    public List<IJSeekResponse> generateResponse() throws NoRequestFoundException {
+    public IJSeekResponse generateResponse() throws NoRequestFoundException {
         infoResponse = new InfoResponse(this.getEvent());
         infoResponse.setParentRequest(this);
         parseRequestType();
 
-        List<IJSeekResponse> responses = new ArrayList();
-        responses.add(infoResponse);
-
-        return responses;
+        return infoResponse;
     }
 
     private void parseRequestType(){
