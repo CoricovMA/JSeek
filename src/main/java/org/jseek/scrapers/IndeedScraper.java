@@ -8,8 +8,12 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class IndeedScraper implements SeekScraper{
 
+/**
+ * FLOW
+ * request -> parser -> scraperResponse -> setScraperResponse in response
+ */
+public class IndeedScraper implements SeekScraper{
 
     @Override
     public void execute(JobRequest request) throws IOException {
