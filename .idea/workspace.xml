@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/ScraperResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/messages/JobEmbed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <module name="JSeek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.jseek.*" />
+          <option name="PATTERN" value="org.jseek.ScraperResponse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,29 +109,29 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622121739" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1599871648243">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1599884597462">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871648243" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599884597462" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1599871648242">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1599884597462">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871648242" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599884597462" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1599871648242">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1599884597462">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871648242" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599884597462" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1599871648243">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1599884597462">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871648243" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599884597462" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
     <state width="1877" height="264" key="GridCell.Tab.1.bottom" timestamp="1599871392797">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -227,16 +225,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java</url>
           <line>10</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
