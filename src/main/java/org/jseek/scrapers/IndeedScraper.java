@@ -2,10 +2,13 @@ package org.jseek.scrapers;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import org.jseek.ScraperResponse.ScraperResponse;
 import org.jseek.requests.JobRequest;
 import org.jseek.response.IJSeekResponse;
+import org.jseek.util.Util;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -20,17 +23,21 @@ import java.util.List;
 public class IndeedScraper implements SeekScraper {
 
     private IJSeekResponse response;
+    private ScraperResponse scraperResponse;
     private String givenUrl;
     private List<String> urls = new ArrayList<>();
+    private String baseUrl = "https://ca.indeed.com";
+    private JobRequest request;
 
     @Override
     public void execute(JobRequest request) throws IOException {
+        this.request = request;
         givenUrl = String.format("https://ca.indeed.com/jobs?q=%s&l=%s",
                 request.getRequestedJob(),
                 request.getLocation());
-//        Document doc = Jsoup.connect(url).get();
-//        Elements jobs = doc.select("div.jobsearch-SerpJobCard");
-//        System.out.println(jobs);
+        givenUrl = Util.checkUrl(givenUrl);
+        getUrls();
+
     }
 
     @Override
@@ -38,19 +45,34 @@ public class IndeedScraper implements SeekScraper {
         return null;
     }
 
-    private static MessageEmbed messageEmbed(Document doc){
-        EmbedBuilder eb = new EmbedBuilder();
+    private void getUrls() throws IOException {
+        int page = 0;
+        while(true){
 
+            String tempUrl = String.format("%s&start=%o", givenUrl, page);
+            Document doc;
 
-        return eb.build();
+            try{
+
+                doc = Jsoup.connect(tempUrl).get();
+                Elements jobs = doc.select("div.jobsearch-SerpJobCard");
+
+                for(Element element: jobs){
+                    urls.add(String.format("%s%s",
+                            baseUrl,
+                            element.select("a.jobtitle").attr("href")));
+                    if(checkAmount()) break;
+                }
+
+                if(checkAmount()) break;
+
+            }catch (Exception e){
+                break;
+            }
+        }
     }
 
-    private void getUrls() throws IOException {
-        Document doc = Jsoup.connect(givenUrl).get();
-        
-        int pages;
-
-
-
+    private boolean checkAmount(){
+        return urls.size() >= this.request.getNumResults();
     }
 }

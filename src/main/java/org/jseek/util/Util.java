@@ -14,4 +14,7 @@ public class Util {
         return new Color(first, second, third);
     }
 
+    public static String checkUrl(String givenUrl){
+        return givenUrl.replaceAll(" ", "%20");
+    }
 }

@@ -73,4 +73,8 @@ public class JobRequest extends IJSeekRequest {
     public String getLocation() {
         return location;
     }
+
+    public int getNumResults(){
+        return this.numResults;
+    }
 }
