@@ -19,6 +19,9 @@ public class RequestFactory {
                 return new JobRequest(event);
             case "info":
                 return new InfoRequest(event);
+            case "logs":
+            case "log":
+                return new LogRequest(event);
             default:
                 return null;
         }

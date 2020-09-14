@@ -15,18 +15,19 @@ import java.io.IOException;
 
 public class App extends ListenerAdapter {
     public static void main( String[] args ) throws IOException {
-//        startBot();
-        String url = "https://ca.indeed.com/viewjob?cmp=Vacation-Tracker&t=Junior+Intermediate+Software+Developer&jk=6d76c82dfb9642e4&vjs=3";
-        Document doc = Jsoup.connect(Util.checkUrl(url)).get();
-        Elements jobs = doc.select("div.jobsearch-SerpJobCard");
-        for(Element element: jobs){
-            System.out.println(String.format("https://ca.indeed.com%s",element.select("a.jobtitle").attr("href")));
-            System.out.println(element.select("span.salaryText").text());
-            System.out.println(element.select("span.company").text());
-            System.out.println(element.select("div.summary").text());
-            System.out.println(element.select("span.ratingsContent").text());
-            System.out.println("\n");
-        }
+        startBot();
+//        String url = "https://ca.indeed.com/viewjob?cmp=Vacation-Tracker&t=Junior+Intermediate+Software+Developer&jk=6d76c82dfb9642e4&vjs=3";
+//        Document doc = Jsoup.connect(Util.checkUrl(url)).get();
+//        Elements jobs =  doc.select("div.companyrating");
+//        System.out.println(jobs.text());
+//        for(Element element: jobs){
+//            System.out.println(String.format("https://ca.indeed.com%s",element.select("a.jobtitle").attr("href")));
+//            System.out.println(element.select("span.salaryText").text());
+//            System.out.println(element.select("span.company").text());
+//            System.out.println(element.select("div.summary").text());
+//            System.out.println(element.select("span.ratingsContent").text());
+//            System.out.println("\n");
+//        }
     }
 
     public static void startBot(){
