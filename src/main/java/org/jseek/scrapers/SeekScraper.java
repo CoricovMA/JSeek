@@ -9,5 +9,5 @@ public interface SeekScraper {
 
     void execute(JobRequest request) throws IOException;
 
-    IJSeekResponse [] retrieveResponses();
+    IJSeekResponse  retrieveResponses();
 }

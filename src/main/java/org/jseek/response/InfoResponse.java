@@ -3,6 +3,7 @@ package org.jseek.response;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.config.JSeekConfig;
+import org.jseek.util.Util;
 
 import java.awt.*;
 import java.util.Map;
@@ -34,7 +35,7 @@ public class InfoResponse extends IJSeekResponse {
     private void sendSimpleResponse(){
         EmbedBuilder eb = this.getEmbedBuilder();
         eb.setAuthor("JSeek");
-        eb.setColor(getRandColor());
+        eb.setColor(Util.getRandColor());
         setCommandsEmbed(eb);
         setFields(eb);
         eb.addBlankField(false);
@@ -72,15 +73,6 @@ public class InfoResponse extends IJSeekResponse {
         for(int i = 0; i < availableCommands.length; i++){
             stringBuilder.append(String.format("```%s: %s```",i+1 ,availableCommands[i]));
         }
-    }
-
-    private Color getRandColor(){
-        ThreadLocalRandom thrd = ThreadLocalRandom.current();
-        int first = thrd.nextInt(0, 256);
-        int second = thrd.nextInt(0, 256);
-        int third = thrd.nextInt(0, 256);
-
-        return new Color(first, second, third);
     }
 
 }
