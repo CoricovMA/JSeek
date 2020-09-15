@@ -8,7 +8,7 @@ public class RequestFactory {
     public static IJSeekRequest createRequest(MessageReceivedEvent event){
         String requestType;
         try{
-            requestType = getRequestType(event.getMessage().getContentRaw());
+            requestType = getRequestType(event.getMessage().getContentRaw()).strip();
         }catch (NoRequestFoundException e){
             event.getChannel().sendMessage(e.getMessage());
             return null;
@@ -31,7 +31,7 @@ public class RequestFactory {
     private static String getRequestType(String messageString) throws NoRequestFoundException {
         String [] elements = messageString.split(" ");
         if(elements[0].equalsIgnoreCase("jseek")){
-            return elements[1];
+            return elements[1].strip();
         }else{
             throw new NoRequestFoundException();
         }

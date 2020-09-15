@@ -23,6 +23,14 @@ public class IndeedJob extends Job{
         this.url = url;
     }
 
+    public IndeedJob(Element elem){
+        this.title = elem.select("h2.title").text().strip();
+        this.company = elem.select("span.company").text().strip();
+        this.salary = elem.select("span.salaryText").text().strip();
+        this.url = String.format("https://ca.indeed.com%s", elem.select("a.jobtitle").attr("href"));
+        this.description = elem.select("div.summary").text().strip();
+    }
+
     public MessageEmbed getEmbed(){
         EmbedBuilder eb = new EmbedBuilder();
 

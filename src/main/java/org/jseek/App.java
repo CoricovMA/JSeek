@@ -16,9 +16,9 @@ import java.io.IOException;
 public class App extends ListenerAdapter {
     public static void main( String[] args ) throws IOException {
         startBot();
-//        String url = "https://ca.indeed.com/viewjob?cmp=Vacation-Tracker&t=Junior+Intermediate+Software+Developer&jk=6d76c82dfb9642e4&vjs=3";
+//        String url = "https://ca.indeed.com/jobs?q=software%20dev%20intern&l=montreal&vjk=811e37515c3a67a2";
 //        Document doc = Jsoup.connect(Util.checkUrl(url)).get();
-//        Elements jobs =  doc.select("div.companyrating");
+//        Elements jobs =  doc.select("div.jobsearch-SerpJobCard");
 //        System.out.println(jobs.text());
 //        for(Element element: jobs){
 //            System.out.println(String.format("https://ca.indeed.com%s",element.select("a.jobtitle").attr("href")));
