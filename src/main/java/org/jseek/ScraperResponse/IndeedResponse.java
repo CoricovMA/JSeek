@@ -18,6 +18,7 @@ public class IndeedResponse extends ScraperResponse {
     private List<MessageEmbed> messages;
     private List<String> urls;
     private String url;
+    private int numResponses;
 
     public IndeedResponse(List<String> urls) {
         this.urls = urls;
@@ -25,9 +26,10 @@ public class IndeedResponse extends ScraperResponse {
         execute();
     }
 
-    public IndeedResponse(String url, int numResponse) {
+    public IndeedResponse(String url, int numResponses) {
         this.url = url;
         this.messages = new ArrayList<>();
+        this.numResponses = numResponses;
         execute();
     }
 
@@ -48,12 +50,19 @@ public class IndeedResponse extends ScraperResponse {
             for(Element ele: jobs){
                 IndeedJob j = new IndeedJob(ele);
                 messages.add(j.getEmbed());
+                if(checkSize()) {
+                    break;
+                }
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    private boolean checkSize(){
+        return messages.size() >= this.numResponses;
     }
 
     private void executeMulti() {
