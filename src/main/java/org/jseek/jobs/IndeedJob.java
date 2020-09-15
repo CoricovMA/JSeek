@@ -2,6 +2,7 @@ package org.jseek.jobs;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import org.jseek.util.Util;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -21,6 +22,7 @@ public class IndeedJob extends Job{
 
         setDescription(sb);
         this.url = url;
+        this.initTime = System.currentTimeMillis();
     }
 
     public IndeedJob(Element elem){
@@ -29,6 +31,7 @@ public class IndeedJob extends Job{
         this.salary = elem.select("span.salaryText").text().strip();
         this.url = String.format("https://ca.indeed.com%s", elem.select("a.jobtitle").attr("href"));
         this.description = elem.select("div.summary").text().strip();
+        this.initTime = System.currentTimeMillis();
     }
 
     public MessageEmbed getEmbed(){
@@ -37,7 +40,7 @@ public class IndeedJob extends Job{
         eb.setTitle(this.company, url);
         eb.setAuthor(this.title, url);
         eb.setDescription(this.description);
-
+        eb.setColor(Util.getRandColor());
         if(salary.strip().length() > 0) eb.addField("Salary", this.salary, true);
 
 

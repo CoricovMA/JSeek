@@ -8,19 +8,22 @@ public class RequestFactory {
     public static IJSeekRequest createRequest(MessageReceivedEvent event){
         String requestType;
         try{
-            requestType = getRequestType(event.getMessage().getContentRaw()).strip();
-        }catch (NoRequestFoundException e){
-            event.getChannel().sendMessage(e.getMessage());
+            requestType = event.getMessage().getContentRaw().split(" ")[0];
+        }catch (Exception e){
+            event.getChannel().sendMessage("Something went wrong.").queue();
             return null;
         }
 
         switch(requestType){
-            case "job":
+            case "!j":
+            case "!job":
                 return new JobRequest(event);
-            case "info":
+            case "!i":
+            case "!info":
                 return new InfoRequest(event);
-            case "logs":
-            case "log":
+            case "!l":
+            case "!log":
+            case "!logs":
                 return new LogRequest(event);
             default:
                 return null;

@@ -12,6 +12,7 @@ public abstract class Job {
     protected String salary;
     protected String description;
     protected Element element;
+    protected long initTime;
 
     public MessageEmbed getEmbed() throws JobNotDefinedError {
         throw new JobNotDefinedError();

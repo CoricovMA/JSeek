@@ -29,7 +29,7 @@ public class InfoRequest extends IJSeekRequest {
 
     private void parseRequestType(){
         elements = getEvent().getMessage().getContentRaw().split(" ");
-        if(elements.length == 2){
+        if(elements.length == 1){
 
             infoResponse.setReqType(InfoResponse.InfoRequestType.SIMPLE);
 

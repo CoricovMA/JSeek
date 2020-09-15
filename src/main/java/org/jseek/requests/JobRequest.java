@@ -83,7 +83,8 @@ public class JobRequest extends IJSeekRequest {
     }
 
     private boolean validateReq(){
-        return getElements()[0].trim().equalsIgnoreCase("jseek job");
+        String str = getElements()[0].trim();
+        return str.equalsIgnoreCase("!job") || str.equalsIgnoreCase("!j");
     }
 
 
