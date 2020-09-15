@@ -23,7 +23,6 @@ public class MessageListeners extends ListenerAdapter {
         } catch (NoRequestFoundException e) {
             e.printStackTrace();
         } catch (NullPointerException npe){
-            npe.printStackTrace();
             Logger.getInstance().log("Error thrown while handling message received.");
         }
 

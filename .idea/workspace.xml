@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/ScraperResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/ScraperResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/errors/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/log/Logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/IndeedJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/IndeedJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/LogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/LogResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/SeekScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/SeekScraper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,56 +121,56 @@
     </state>
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600126865001" />
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622121739" />
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1600128033833">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1600130610958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128033833" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600130610958" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1600128033833">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1600130610958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="301" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128033833" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600130610958" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1600128033833">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1600130610958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="301" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128033833" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600130610958" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1600128033833">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1600130610958">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598536417683" />
-    <state width="1877" height="301" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128033833" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600130610958" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1600128038402">
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1600128428397">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128038402" />
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128428397" />
     <state width="1877" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1600128038402">
+    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1600128428397">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128038402" />
+    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128428397" />
     <state width="1877" height="264" key="GridCell.Tab.1.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1600128038402">
+    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1600128428397">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128038402" />
+    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128428397" />
     <state width="1877" height="264" key="GridCell.Tab.1.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1600128038402">
+    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1600128428397">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128038402" />
+    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600128428397" />
     <state width="1877" height="264" key="GridCell.Tab.1.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
     <state x="2890" y="190" key="Maven.ArtifactSearchDialog" timestamp="1598361453900">
@@ -289,11 +282,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java</url>
           <line>36</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

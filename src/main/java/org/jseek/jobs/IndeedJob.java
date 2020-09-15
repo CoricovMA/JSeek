@@ -26,8 +26,8 @@ public class IndeedJob extends Job{
     public MessageEmbed getEmbed(){
         EmbedBuilder eb = new EmbedBuilder();
 
-        eb.setAuthor(this.company, url);
-        eb.setTitle(this.title);
+        eb.setTitle(this.company, url);
+        eb.setAuthor(this.title, url);
         eb.setDescription(this.description);
 
         if(salary.strip().length() > 0) eb.addField("Salary", this.salary, true);

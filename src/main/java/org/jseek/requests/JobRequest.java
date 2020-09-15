@@ -58,9 +58,9 @@ public class JobRequest extends IJSeekRequest {
     private void setNumResults() {
         System.out.println(Arrays.toString(this.getElements()));
         if(this.getElements().length >= 4){
-            this.numResults = Integer.parseInt(this.getElements()[3]);
+            this.numResults = Integer.parseInt(this.getElements()[4]);
         }else{
-            this.numResults = 1;
+            this.numResults = 5;
         }
     }
 
@@ -70,10 +70,16 @@ public class JobRequest extends IJSeekRequest {
 
     private void setLocation(){
         if(this.getElements().length >= 3){
-            this.location = this.getElements()[3];
-        }else{
-            this.location = "montreal";
+            try{
+                this.numResults = Integer.parseInt(this.getElements()[3]);
+            }catch (Exception e){
+                this.location = this.getElements()[3];
+                if(this.location.strip().length() == 0){
+                    this.location = "montreal";
+                }
+            }
         }
+        this.location = "montreal";
     }
 
     private boolean validateReq(){
