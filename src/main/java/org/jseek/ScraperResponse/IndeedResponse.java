@@ -1,6 +1,7 @@
 package org.jseek.ScraperResponse;
 
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import org.jseek.errors.JobNotDefinedError;
 import org.jseek.jobs.Job;
 import org.jseek.log.Logger;
 import org.jseek.jobs.IndeedJob;
@@ -47,15 +48,12 @@ public class IndeedResponse extends ScraperResponse {
         try {
             doc = Jsoup.connect(url).get();
             Elements jobs = doc.select("div.jobsearch-SerpJobCard");
-            for(Element ele: jobs){
-                IndeedJob j = new IndeedJob(ele);
-                messages.add(j.getEmbed());
-                if(checkSize()) {
-                    break;
-                }
+            for(int i = 0; i < numResponses; i++){
+                Job job = new IndeedJob(jobs.get(i));
+                messages.add(job.getEmbed());
             }
 
-        } catch (IOException e) {
+        } catch (IOException | JobNotDefinedError e) {
             e.printStackTrace();
         }
 
