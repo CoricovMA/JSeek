@@ -13,7 +13,7 @@ public abstract class ScraperResponse {
         this.jobResponse = new ArrayList<>();
     }
 
-    private void execute(){};
+    protected void execute(){};
 
     public List<MessageEmbed> getJobResponse() {
         return jobResponse;

@@ -3,6 +3,10 @@ package org.jseek.requests;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.response.IJSeekResponse;
 import org.jseek.response.JobResponse;
+import org.jseek.scrapers.IndeedScraper;
+
+import java.io.IOException;
+import java.util.Arrays;
 
 
 /**
@@ -13,23 +17,33 @@ public class JobRequest extends IJSeekRequest {
 
     private String requestedJob;
     private String location;
-    private IJSeekResponse response;
+    private IndeedScraper scraper;
+    private JobResponse response;
     private int numResults;
 
 
     public JobRequest(MessageReceivedEvent event){
         super(event);
         this.setElements(this.getEvent().getMessage().getContentRaw().split("\""));
+        this.scraper = new IndeedScraper();
     }
 
     @Override
     public IJSeekResponse generateResponse() {
-        this.setResponse(new JobResponse(this.getEvent()));
-        this.getResponse().setParentRequest(this);
-
-
         parseRequest();
-        return this.response;
+        this.response = new JobResponse(this.getEvent());
+
+        try {
+            scraper.execute(this);
+            scraper.retrieveResponses();
+            response.setMessages(scraper.retrieveResponses().getJobResponse());
+
+            return this.response;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     private void parseRequest() {
@@ -42,8 +56,9 @@ public class JobRequest extends IJSeekRequest {
     }
 
     private void setNumResults() {
+        System.out.println(Arrays.toString(this.getElements()));
         if(this.getElements().length >= 4){
-            this.numResults = Integer.parseInt(this.getElements()[4]);
+            this.numResults = Integer.parseInt(this.getElements()[3]);
         }else{
             this.numResults = 1;
         }

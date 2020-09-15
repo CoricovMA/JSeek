@@ -2,6 +2,7 @@ package org.jseek.scrapers;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import org.jseek.ScraperResponse.IndeedResponse;
 import org.jseek.ScraperResponse.ScraperResponse;
 import org.jseek.requests.JobRequest;
 import org.jseek.response.IJSeekResponse;
@@ -22,12 +23,12 @@ import java.util.List;
  */
 public class IndeedScraper implements SeekScraper {
 
-    private IJSeekResponse response;
     private ScraperResponse scraperResponse;
     private String givenUrl;
     private List<String> urls = new ArrayList<>();
     private String baseUrl = "https://ca.indeed.com";
     private JobRequest request;
+    private long queryStart = System.currentTimeMillis();
 
     @Override
     public void execute(JobRequest request) throws IOException {
@@ -37,19 +38,19 @@ public class IndeedScraper implements SeekScraper {
                 request.getLocation());
         givenUrl = Util.checkUrl(givenUrl);
         getUrls();
-
+        this.scraperResponse = new IndeedResponse(urls);
     }
 
     @Override
-    public IJSeekResponse retrieveResponses() {
-        return null;
+    public ScraperResponse retrieveResponses() {
+        return this.scraperResponse;
     }
 
     private void getUrls() throws IOException {
         int page = 0;
         while(true){
 
-            String tempUrl = String.format("%s&start=%o", givenUrl, page);
+            String tempUrl = String.format("%s&start=%o", givenUrl, (page*10));
             Document doc;
 
             try{
@@ -65,7 +66,7 @@ public class IndeedScraper implements SeekScraper {
                 }
 
                 if(checkAmount()) break;
-
+                page++;
             }catch (Exception e){
                 break;
             }
@@ -75,4 +76,5 @@ public class IndeedScraper implements SeekScraper {
     private boolean checkAmount(){
         return urls.size() >= this.request.getNumResults();
     }
+
 }

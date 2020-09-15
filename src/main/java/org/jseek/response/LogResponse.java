@@ -1,7 +1,7 @@
 package org.jseek.response;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import org.jseek.errors.Logger;
+import org.jseek.log.Logger;
 
 public class LogResponse extends IJSeekResponse {
 

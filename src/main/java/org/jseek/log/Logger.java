@@ -1,6 +1,5 @@
-package org.jseek.errors;
+package org.jseek.log;
 
-import java.awt.desktop.SystemEventListener;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;

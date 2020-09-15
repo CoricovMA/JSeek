@@ -13,29 +13,34 @@ public class IndeedJob extends Job{
     public IndeedJob(String url) throws IOException {
         Document doc = Jsoup.connect(url).get();
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(doc.select("div.jobDescriptionText").text(), 0, 1000);
-        sb.append("...");
+        StringBuilder sb = new StringBuilder(doc.select("div#jobDescriptionText").text());
 
         this.title = doc.select("h1.jobsearch-JobInfoHeader-title").text();
         this.company = doc.select("div.jobsearch-InlineCompanyRating").text();
         this.salary = doc.select("div.jobsearch-JobMetadataHeader-item ").text();
 
-        this.description = sb.toString();
+        setDescription(sb);
         this.url = url;
     }
 
     public MessageEmbed getEmbed(){
         EmbedBuilder eb = new EmbedBuilder();
 
+        eb.setAuthor(this.company, url);
         eb.setTitle(this.title);
-        eb.setAuthor(this.company);
         eb.setDescription(this.description);
 
         if(salary.strip().length() > 0) eb.addField("Salary", this.salary, true);
 
-        eb.setFooter(url);
-        
+
         return eb.build();
+    }
+
+    private void setDescription(StringBuilder sb){
+        if(sb.toString().length() > 200){
+            this.description = sb.substring(0, 248) + "...";
+        }else{
+            this.description = sb.toString();
+        }
     }
 }
