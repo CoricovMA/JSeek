@@ -3,6 +3,7 @@ package org.jseek;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jseek.jobs.JobStore;
 import org.jseek.listeners.*;
 import org.jseek.util.Util;
 import org.jsoup.Jsoup;
@@ -14,6 +15,9 @@ import javax.security.auth.login.LoginException;
 import java.io.IOException;
 
 public class App extends ListenerAdapter {
+
+    private JobStore jobStore = JobStore.getInstance();
+
     public static void main( String[] args ) throws IOException {
         startBot();
 //        String url = "https://ca.indeed.com/jobs?q=software%20dev%20intern&l=montreal&vjk=811e37515c3a67a2";

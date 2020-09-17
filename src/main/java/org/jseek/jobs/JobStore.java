@@ -36,11 +36,15 @@ public class JobStore {
         boolean has = store.get(parser).contains(job.title);
         boolean timedOut = (System.currentTimeMillis() - job.initTime) > 600000;
 
-        if(timedOut){
+        if(has && timedOut) {
+            return false;
+        }else if(!has){
+            return true;
+        }else {
             store.get(parser).remove(job.title);
+            return false;
         }
         
-        return timedOut && has;
     }
 
 }

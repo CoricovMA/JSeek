@@ -37,7 +37,7 @@ public class IndeedScraper implements SeekScraper {
                 request.getRequestedJob(),
                 request.getLocation());
         givenUrl = Util.checkUrl(givenUrl);
-        getUrls();
+        System.out.println(givenUrl);
         this.scraperResponse = new IndeedResponse(givenUrl, this.request.getNumResults());
     }
 
@@ -46,6 +46,9 @@ public class IndeedScraper implements SeekScraper {
         return this.scraperResponse;
     }
 
+    /**
+     * Old method
+     */
     private void getUrls(){
         int page = 0;
         while(true){

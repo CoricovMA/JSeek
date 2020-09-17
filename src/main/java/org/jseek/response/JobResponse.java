@@ -1,5 +1,8 @@
 package org.jseek.response;
 
+import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.entities.Message;
+import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -24,9 +27,12 @@ public class JobResponse extends IJSeekResponse{
     }
 
     public void send(){
+        long execStart = System.currentTimeMillis();
         for(MessageEmbed embed: messageEmbedList){
             this.getEvent().getChannel().sendMessage(embed).queue();
         }
+
+        System.out.println(String.format("Message send time: %s", System.currentTimeMillis()-execStart));
     }
 
 

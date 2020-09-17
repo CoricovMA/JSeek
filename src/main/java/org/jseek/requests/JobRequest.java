@@ -20,7 +20,7 @@ public class JobRequest extends IJSeekRequest {
     private IndeedScraper scraper;
     private JobResponse response;
     private int numResults;
-
+    private long queryStart;
 
     public JobRequest(MessageReceivedEvent event){
         super(event);
@@ -56,9 +56,8 @@ public class JobRequest extends IJSeekRequest {
     }
 
     private void setNumResults() {
-        System.out.println(Arrays.toString(this.getElements()));
-        if(this.getElements().length > 4){
-            this.numResults = Integer.parseInt(this.getElements()[4]);
+        if(this.getElements().length >= 4){
+            this.numResults = Integer.parseInt(this.getElements()[3]);
         }else{
             this.numResults = 5;
         }
