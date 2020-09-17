@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/IndeedJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/IndeedJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../Program Files/apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:/Program Files/apache-maven-3.6.3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -69,6 +65,18 @@
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -182,10 +190,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="968" height="533" key="XDebugger.FullValuePopup/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871323770" />
-    <state x="636" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1600105452449">
+    <state x="636" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1600353432725">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600105452449" />
+    <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600353432725" />
     <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1600025351998" />
     <state x="2556" y="359" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383565351" />
     <state x="731" y="202" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1598485990418">
@@ -279,12 +287,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java</url>
-          <line>38</line>
+          <line>40</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java</url>
-          <line>46</line>
+          <line>48</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint type="java-line">

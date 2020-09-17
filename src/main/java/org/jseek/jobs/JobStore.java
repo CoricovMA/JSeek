@@ -8,14 +8,19 @@ import java.util.Map;
 public class JobStore {
 
     private static JobStore instance;
-    private static Map<String, List<String>> store;
+    private static Map<Parser, List<String>> store;
+
+    public enum Parser{
+        INDEED,
+        GOOGLE;
+    }
 
     private JobStore(){
         store = new HashMap<>();
-        store.put("indeed", new ArrayList<>());
+        store.put(Parser.INDEED, new ArrayList<>());
     }
 
-    public JobStore getInstance(){
+    public static JobStore getInstance(){
         if(instance == null){
             instance = new JobStore();
         }
@@ -23,19 +28,19 @@ public class JobStore {
         return instance;
     }
 
-    public static void addJob(String parser, Job job){
+    public static void addJob(Parser parser, Job job){
         store.get(parser).add(job.title);
     }
 
-    public boolean contains(String parser, Job job){
+    public boolean contains(Parser parser, Job job){
         boolean has = store.get(parser).contains(job.title);
-        boolean timeout = (System.currentTimeMillis() - job.initTime) > 600000;
+        boolean timedOut = (System.currentTimeMillis() - job.initTime) > 600000;
 
-        if(timeout){
+        if(timedOut){
             store.get(parser).remove(job.title);
         }
         
-        return timeout && has;
+        return timedOut && has;
     }
 
 }
