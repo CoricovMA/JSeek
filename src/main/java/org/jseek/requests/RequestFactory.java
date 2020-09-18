@@ -25,8 +25,6 @@ public class RequestFactory {
             case "!log":
             case "!logs":
                 return new LogRequest(event);
-            case "!v":
-                return new VoiceRequest(event);
             default:
                 return null;
         }

@@ -6,8 +6,6 @@ import org.jseek.errors.NoRequestFoundException;
 import org.jseek.requests.Request;
 import org.jseek.requests.RequestFactory;
 
-import java.sql.SQLOutput;
-
 public class MessageListeners extends ListenerAdapter {
 
     @Override

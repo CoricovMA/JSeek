@@ -4,11 +4,9 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jseek.jobs.JobStore;
-import org.jseek.listeners.*;
+import org.jseek.listeners.MessageListeners;
 
 import javax.security.auth.login.LoginException;
-import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.AudioSystem;
 import java.io.IOException;
 
 public class App extends ListenerAdapter {
