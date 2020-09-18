@@ -2,19 +2,19 @@ package org.jseek.requests;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.errors.NoRequestFoundException;
-import org.jseek.response.IJSeekResponse;
+import org.jseek.response.Response;
 
-public abstract class IJSeekRequest {
+public abstract class Request {
 
     private MessageReceivedEvent event;
-    private IJSeekResponse response;
+    private Response response;
     private String [] elements;
 
-    IJSeekRequest(MessageReceivedEvent event){
+    Request(MessageReceivedEvent event){
         this.event = event;
     }
 
-    public IJSeekResponse generateResponse() throws NoRequestFoundException {
+    public Response generateResponse() throws NoRequestFoundException {
         throw new NoRequestFoundException();
     }
 
@@ -22,12 +22,8 @@ public abstract class IJSeekRequest {
         return this.event;
     }
 
-    protected void setResponse(IJSeekResponse response){
+    protected void setResponse(Response response){
         this.response = response;
-    }
-
-    protected IJSeekResponse getResponse(){
-        return this.response;
     }
 
     protected void setElements(String [] elements){

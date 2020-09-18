@@ -5,7 +5,7 @@ import org.jseek.errors.NoRequestFoundException;
 
 public class RequestFactory {
 
-    public static IJSeekRequest createRequest(MessageReceivedEvent event){
+    public static Request createRequest(MessageReceivedEvent event){
         String requestType;
         try{
             requestType = event.getMessage().getContentRaw().split(" ")[0];
@@ -25,6 +25,8 @@ public class RequestFactory {
             case "!log":
             case "!logs":
                 return new LogRequest(event);
+            case "!v":
+                return new VoiceRequest(event);
             default:
                 return null;
         }

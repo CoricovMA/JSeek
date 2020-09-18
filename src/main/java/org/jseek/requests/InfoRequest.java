@@ -3,13 +3,10 @@ package org.jseek.requests;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.config.JSeekConfig;
 import org.jseek.errors.NoRequestFoundException;
-import org.jseek.response.IJSeekResponse;
+import org.jseek.response.Response;
 import org.jseek.response.InfoResponse;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class InfoRequest extends IJSeekRequest {
+public class InfoRequest extends Request {
 
     private InfoResponse infoResponse;
     private String [] elements;
@@ -19,7 +16,7 @@ public class InfoRequest extends IJSeekRequest {
     }
 
     @Override
-    public IJSeekResponse generateResponse() throws NoRequestFoundException {
+    public Response generateResponse() throws NoRequestFoundException {
         infoResponse = new InfoResponse(this.getEvent());
         infoResponse.setParentRequest(this);
         parseRequestType();

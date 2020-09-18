@@ -2,19 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/QueryStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/ResponseGetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/audio/VoiceHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/VoiceRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/VoiceResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shutup.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/QueryStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/QueryStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/log/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/IJSeekRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/LogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/LogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/NameRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/NameRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/IJSeekResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/LogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/LogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/ResponseGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/ResponseGetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/SeekScraper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/scrapers/SeekScraper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +61,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Lombok plugin" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.jseek.requests" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AMC\IdeaProjects\JSeek\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -109,16 +130,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="790" y="381" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600126934933" />
-    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1600379621828">
+    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1600404412948">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600379621828" />
+    <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404412948" />
     <state x="955" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599716090958" />
     <state x="2875" y="238" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598361976843" />
-    <state x="173" y="124" width="1159" height="782" key="#xdebugger.evaluate" timestamp="1600376148433">
+    <state x="173" y="124" width="1159" height="782" key="#xdebugger.evaluate" timestamp="1600404071999">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="173" y="124" width="1159" height="782" key="#xdebugger.evaluate/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600376148433" />
+    <state x="173" y="124" width="1159" height="782" key="#xdebugger.evaluate/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404071999" />
     <state x="396" y="218" key="#xdebugger.evaluate/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599871365448" />
     <state x="3124" y="170" key="#xdebugger.evaluate/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598362605991" />
     <state x="703" y="349" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600047398427">
@@ -131,60 +152,60 @@
     <state width="444" height="640" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1600142914638" />
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600126865001" />
     <state width="444" height="646" key="DebuggerActiveHint/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598622121739" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1600380461719">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1600404646984">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600143189190" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600380461719" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404646984" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1600380461718">
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1600404646984">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600143189190" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600380461718" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404646984" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1600380461718">
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1600404646984">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600143189189" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600380461718" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404646984" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1600380461718">
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1600404646984">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600143189190" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600380461718" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404646984" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383528025" />
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1600377476202">
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom" timestamp="1600404512949">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600143121075" />
-    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600377476202" />
+    <state width="1877" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404512949" />
     <state width="1877" height="264" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1600377476202">
+    <state width="1877" height="301" key="GridCell.Tab.1.center" timestamp="1600404512949">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600143121057" />
-    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600377476202" />
+    <state width="1877" height="301" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404512949" />
     <state width="1877" height="264" key="GridCell.Tab.1.center/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1600377476202">
+    <state width="1877" height="301" key="GridCell.Tab.1.left" timestamp="1600404512949">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600143121057" />
-    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600377476202" />
+    <state width="1877" height="301" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404512949" />
     <state width="1877" height="264" key="GridCell.Tab.1.left/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
-    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1600377476202">
+    <state width="1877" height="301" key="GridCell.Tab.1.right" timestamp="1600404512949">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600143121057" />
-    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600377476202" />
+    <state width="1877" height="301" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600404512949" />
     <state width="1877" height="264" key="GridCell.Tab.1.right/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599928177158" />
     <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383086888" />
     <state x="970" y="181" key="Maven.ArtifactSearchDialog" timestamp="1600378793330">
@@ -204,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600380151219" />
-    <state x="636" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1600356706526">
+    <state x="636" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1600385532347">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600356706526" />
+    <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600385532347" />
     <state x="636" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1600025351998" />
     <state x="2556" y="359" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.9.1920.1050@1920.9.1920.1050" timestamp="1598383565351" />
     <state x="767" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600374034139">
@@ -218,11 +239,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="731" y="202" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1598485990418" />
-    <state x="530" y="180" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600376816150">
+    <state x="530" y="180" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600399661900">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="530" y="178" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1600143082627" />
-    <state x="530" y="180" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600376816150" />
+    <state x="530" y="180" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600399661900" />
     <state x="530" y="180" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/1920.9.1920.1050@0.0.1920.1050" timestamp="1599716613728" />
     <state x="646" y="241" width="627" height="572" key="find.popup" timestamp="1600379349248">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -250,33 +271,28 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java</url>
-          <line>34</line>
+          <line>36</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/config/JSeekConfig.java</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java</url>
-          <line>15</line>
+          <line>12</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
           <line>22</line>
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/RequestFactory.java</url>
@@ -295,12 +311,12 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/scrapers/IndeedScraper.java</url>
-          <line>34</line>
+          <line>31</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java</url>
-          <line>36</line>
+          <line>34</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -310,23 +326,28 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/JobRequest.java</url>
-          <line>25</line>
+          <line>23</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/requests/InfoRequest.java</url>
-          <line>30</line>
+          <line>27</line>
           <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java</url>
           <line>35</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/response/VoiceResponse.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

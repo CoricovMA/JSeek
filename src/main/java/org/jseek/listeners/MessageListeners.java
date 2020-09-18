@@ -3,8 +3,10 @@ package org.jseek.listeners;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jseek.errors.NoRequestFoundException;
-import org.jseek.requests.IJSeekRequest;
+import org.jseek.requests.Request;
 import org.jseek.requests.RequestFactory;
+
+import java.sql.SQLOutput;
 
 public class MessageListeners extends ListenerAdapter {
 
@@ -14,7 +16,7 @@ public class MessageListeners extends ListenerAdapter {
             return;
         }
 
-        IJSeekRequest request = RequestFactory.createRequest(event);
+        Request request = RequestFactory.createRequest(event);
 
         try {
             assert request != null;
@@ -23,9 +25,8 @@ public class MessageListeners extends ListenerAdapter {
             event.getChannel().sendMessage(String.format("Query took %s ms",
                         (System.currentTimeMillis()-queryStart)/1000.0))
                     .queue();
-        } catch (NoRequestFoundException e) {
-            e.printStackTrace();
-        } catch (NullPointerException npe){
+        } catch (NoRequestFoundException | NullPointerException e) {
+            System.out.println(String.format("%s said %s", event.getAuthor().getName(), event.getMessage().getContentRaw()));
         }
 
     }

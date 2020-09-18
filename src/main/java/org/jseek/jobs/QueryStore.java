@@ -6,7 +6,12 @@ package org.jseek.jobs;
  *    - query time
  *    - results
  *    - timer
- *    - query 
+ *    - query
+ *2. Query store
+ *    - key = query
+ *    - val = query object
+ *    - append results
+ *    - if query timer has expired, start returning results
  *
  */
 public class QueryStore {

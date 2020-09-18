@@ -1,19 +1,12 @@
 package org.jseek.response;
 
-import net.dv8tion.jda.api.MessageBuilder;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.MessageChannel;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * TODO
- * 1.
- */
-public class JobResponse extends IJSeekResponse{
+public class JobResponse extends Response {
 
     private List<MessageEmbed> messageEmbedList;
 

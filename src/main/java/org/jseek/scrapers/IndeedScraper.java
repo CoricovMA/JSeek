@@ -1,11 +1,8 @@
 package org.jseek.scrapers;
 
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.MessageEmbed;
 import org.jseek.ScraperResponse.IndeedResponse;
 import org.jseek.ScraperResponse.ScraperResponse;
 import org.jseek.requests.JobRequest;
-import org.jseek.response.IJSeekResponse;
 import org.jseek.util.Util;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

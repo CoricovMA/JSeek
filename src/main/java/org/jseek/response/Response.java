@@ -3,16 +3,16 @@ package org.jseek.response;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.config.JSeekConfig;
-import org.jseek.requests.IJSeekRequest;
+import org.jseek.requests.Request;
 
-public abstract class IJSeekResponse {
+public abstract class Response {
 
     private MessageReceivedEvent event;
-    private IJSeekRequest parentRequest;
+    private Request parentRequest;
     private EmbedBuilder eb = new EmbedBuilder();
     public static String [] availableCommands = (String []) JSeekConfig.getInstance().getProperties().get("commands");
 
-    IJSeekResponse(MessageReceivedEvent event){
+    Response(MessageReceivedEvent event){
         this.event = event;
     }
 
@@ -28,11 +28,11 @@ public abstract class IJSeekResponse {
         this.event = event;
     }
 
-    public void setParentRequest(IJSeekRequest request){
+    public void setParentRequest(Request request){
         this.parentRequest = request;
     }
 
-    public IJSeekRequest getParentRequest(){
+    public Request getParentRequest(){
         return this.parentRequest;
     }
 

@@ -1,9 +1,9 @@
 package org.jseek.requests;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import org.jseek.response.IJSeekResponse;
+import org.jseek.response.Response;
 
-public class NameRequest extends IJSeekRequest {
+public class NameRequest extends Request {
 
 
     NameRequest(MessageReceivedEvent event) {
@@ -11,7 +11,7 @@ public class NameRequest extends IJSeekRequest {
     }
 
     @Override
-    public IJSeekResponse generateResponse() {
+    public Response generateResponse() {
         return null;
     }
 }

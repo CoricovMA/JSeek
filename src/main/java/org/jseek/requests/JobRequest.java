@@ -1,26 +1,24 @@
 package org.jseek.requests;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import org.jseek.response.IJSeekResponse;
+import org.jseek.response.Response;
 import org.jseek.response.JobResponse;
 import org.jseek.scrapers.IndeedScraper;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 
 /**
  * jseek job "job title" "location" "num"
  */
 
-public class JobRequest extends IJSeekRequest {
+public class JobRequest extends Request {
 
     private String requestedJob;
     private String location;
     private IndeedScraper scraper;
     private JobResponse response;
     private int numResults;
-    private long queryStart;
 
     public JobRequest(MessageReceivedEvent event){
         super(event);
@@ -29,7 +27,7 @@ public class JobRequest extends IJSeekRequest {
     }
 
     @Override
-    public IJSeekResponse generateResponse() {
+    public Response generateResponse() {
         parseRequest();
         this.response = new JobResponse(this.getEvent());
 

@@ -5,11 +5,9 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import org.jseek.config.JSeekConfig;
 import org.jseek.util.Util;
 
-import java.awt.*;
 import java.util.Map;
-import java.util.concurrent.ThreadLocalRandom;
 
-public class InfoResponse extends IJSeekResponse {
+public class InfoResponse extends Response {
 
     private InfoRequestType reqType;
     private static final String commandName = "Info";
