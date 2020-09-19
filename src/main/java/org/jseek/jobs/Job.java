@@ -18,4 +18,8 @@ public abstract class Job {
         throw new JobNotDefinedError();
     }
 
+    public boolean canUse(){
+        return (System.currentTimeMillis() - initTime) >= 60000;
+    }
+
 }

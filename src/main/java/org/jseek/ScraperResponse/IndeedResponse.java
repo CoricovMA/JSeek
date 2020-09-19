@@ -2,10 +2,9 @@ package org.jseek.ScraperResponse;
 
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jseek.errors.JobNotDefinedError;
-import org.jseek.jobs.IndeedJob;
-import org.jseek.jobs.Job;
-import org.jseek.jobs.JobStore;
+import org.jseek.jobs.*;
 import org.jseek.response.ResponseGetter;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -13,17 +12,25 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+import static java.lang.System.currentTimeMillis;
 
 public class IndeedResponse extends ScraperResponse {
+    private final Logger logger = LogManager.getLogger(IndeedResponse.class);
 
     private List<MessageEmbed> messages;
     private List<String> urls;
+
     private String url;
-    private int numResponses;
+    private String requestedJob;
     private JobStore.Parser parser = JobStore.Parser.INDEED;
-    private final org.apache.logging.log4j.Logger logger = LogManager.getLogger(IndeedResponse.class);
+
     private int pagesToGet;
+    private int numResponses;
 
     private IndeedResponse(){
         this.messages = new ArrayList<>();
@@ -36,10 +43,11 @@ public class IndeedResponse extends ScraperResponse {
         execute();
     }
 
-    public IndeedResponse(String url, int numResponses) {
+    public IndeedResponse(String url, int numResponses, String requestedJob) {
         this();
         this.url = url;
         this.numResponses = numResponses;
+        this.requestedJob = requestedJob;
         execute();
     }
 
@@ -53,11 +61,11 @@ public class IndeedResponse extends ScraperResponse {
     }
 
     private void executeSingles() {
-        long execStart = System.currentTimeMillis();
+        long execStart = currentTimeMillis();
 
         try {
             List<Element> elements = fetchElements();
-
+            List<Job> generatedJobs = new ArrayList<>();
             for(Element elem: elements){
                 if(messages.size() >= numResponses) break;
 
@@ -68,13 +76,16 @@ public class IndeedResponse extends ScraperResponse {
 
                 messages.add(job.getEmbed());
                 JobStore.addJob(parser, job);
+                generatedJobs.add(job);
             }
+
+
 
         } catch (JobNotDefinedError e) {
             e.printStackTrace();
         }
 
-        System.out.println(String.format("Adding jobs execution: %s",System.currentTimeMillis() - execStart));
+        System.out.println(String.format("Adding jobs execution: %s", currentTimeMillis() - execStart));
     }
 
     private boolean checkSize(){
@@ -82,45 +93,44 @@ public class IndeedResponse extends ScraperResponse {
     }
 
     private List<Element> fetchElements(){
-        long execTime = System.currentTimeMillis();
+        long execTime = currentTimeMillis();
         List<Element> elements = new ArrayList<>();
-        ExecutorService executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(pagesToGet);
+        ExecutorService executor = Executors.newFixedThreadPool(pagesToGet);
         List<Future<Elements>> futures = new ArrayList<>();
         String selector = "div.jobsearch-SerpJobCard";
 
+        long loopTime = currentTimeMillis();
         for(int i = 0; i < pagesToGet; i ++){
             try{
-                long simpleGet = System.currentTimeMillis();
                 String tempUrl = String.format("%s&start=%s", url, i*10);
 
                 ResponseGetter getter = new ResponseGetter(tempUrl, selector);
                 Future<Elements> result = executor.submit(getter);
                 futures.add(result);
 
-                System.out.println(String.format("Get request took: %s", System.currentTimeMillis()-simpleGet));
-
-                simpleGet = System.currentTimeMillis();
-
-                System.out.println(String.format("Adding elements took: %s", System.currentTimeMillis()-simpleGet));
             }catch (Exception e){
-                logger.info("Error getting elements.");
+                logger.info("Error getting elements. URL: {}", url);
             }
 
-            futures.forEach(
-                    elem -> {
-                        try {
-                            elements.addAll(elem.get());
-                        } catch (InterruptedException | ExecutionException e) {
-                            e.printStackTrace();
-                        }
-                    }
-            );
-
-            System.out.println(String.format("Total get time: %s", System.currentTimeMillis()-execTime));
-            return elements;
         }
 
-        System.out.println(String.format("Fetch elements execution: %s", (System.currentTimeMillis()-execTime)));
+        logger.info(String.format("Loop time: %s", (currentTimeMillis()-loopTime)));
+
+
+        loopTime = currentTimeMillis();
+        futures.forEach(
+                elem -> {
+                    try {
+                        elements.addAll(elem.get());
+                    } catch (InterruptedException | ExecutionException e) {
+                        e.printStackTrace();
+                    }
+                }
+        );
+
+        logger.info(String.format("Features adding time: %s", (currentTimeMillis() - loopTime)));
+
+        logger.info(String.format("Fetch elements execution: %s", (currentTimeMillis()-execTime)));
         return elements;
     }
 

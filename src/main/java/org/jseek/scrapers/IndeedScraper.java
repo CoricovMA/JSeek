@@ -25,7 +25,6 @@ public class IndeedScraper implements SeekScraper {
     private List<String> urls = new ArrayList<>();
     private String baseUrl = "https://ca.indeed.com";
     private JobRequest request;
-    private long queryStart = System.currentTimeMillis();
 
     @Override
     public void execute(JobRequest request) throws IOException {
@@ -35,7 +34,7 @@ public class IndeedScraper implements SeekScraper {
                 request.getLocation());
         givenUrl = Util.checkUrl(givenUrl);
         System.out.println(givenUrl);
-        this.scraperResponse = new IndeedResponse(givenUrl, this.request.getNumResults());
+        this.scraperResponse = new IndeedResponse(givenUrl, this.request.getNumResults(), request.getRequestedJob());
     }
 
     @Override

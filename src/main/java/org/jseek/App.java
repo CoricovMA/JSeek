@@ -15,9 +15,6 @@ public class App extends ListenerAdapter {
 
     public static void main( String[] args ) throws IOException {
         startBot();
-//        for(AudioFileFormat.Type t : AudioSystem.getAudioFileTypes()){
-//            System.out.println(t);
-//        }
     }
 
     public static void startBot(){
