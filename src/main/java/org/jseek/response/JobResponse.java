@@ -22,7 +22,13 @@ public class JobResponse extends Response {
     public void send(){
         long execStart = System.currentTimeMillis();
         for(MessageEmbed embed: messageEmbedList){
-            this.getEvent().getChannel().sendMessage(embed).queue();
+            this.getEvent()
+                    .getMessage()
+                    .getAuthor()
+                    .openPrivateChannel()
+                    .flatMap(
+                            privateChannel -> privateChannel.sendMessage(embed))
+                    .queue();
         }
 
         System.out.println(String.format("Message send time: %s", System.currentTimeMillis()-execStart));
