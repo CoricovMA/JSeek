@@ -34,7 +34,7 @@ public class JobStore {
         if(timeout){
             store.get(parser).remove(job.title);
         }
-        
+
         return timeout && has;
     }
 
