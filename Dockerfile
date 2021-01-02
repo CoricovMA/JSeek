@@ -1,9 +1,10 @@
 FROM openjdk:11
 
+RUN apt-get update
+RUN apt -y install maven
+
 RUN mkdir -p /usr/app
 
-ADD ./target/JSeek-1.0-SNAPSHOT.jar ./usr/app
-
+ADD ./target ./usr/app
+ADD pom.xml ./usr/app
 WORKDIR /usr/app
-
-ENTRYPOINT ["java", "-jar", "JSeek-1.0-SNAPSHOT.jar"]

@@ -18,8 +18,6 @@ public class App extends ListenerAdapter {
     }
 
     public static void startBot(){
-        System.out.println(System.getenv("DISC_BOT_KEY"));
-
         try {
             JDA jda = JDABuilder.createDefault(System.getenv("DISC_BOT_KEY"))
                     .addEventListeners(new MessageListeners())

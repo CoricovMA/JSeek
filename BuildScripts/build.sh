@@ -2,6 +2,6 @@
 
 mvn clean install
 
-docker build . -t jseek
+docker-compose build
 
-docker run --name jseek -d -p 8080:8080 jseek
+docker-compose run -e DISC_BOT_KEY="${DISC_BOT_KEY}" jseek

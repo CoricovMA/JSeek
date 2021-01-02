@@ -24,10 +24,8 @@ public class JobResponse extends Response {
         for(MessageEmbed embed: messageEmbedList){
             this.getEvent()
                     .getMessage()
-                    .getAuthor()
-                    .openPrivateChannel()
-                    .flatMap(
-                            privateChannel -> privateChannel.sendMessage(embed))
+                    .getChannel()
+                    .sendMessage(embed)
                     .queue();
         }
 
