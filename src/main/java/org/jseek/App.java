@@ -19,7 +19,7 @@ public class App extends ListenerAdapter {
 
     private static String fetchKey() {
         try {
-            return Files.readString(Paths.get("env"));
+            return Files.readString(Paths.get("main.evn"));
         } catch (IOException e) {
             e.printStackTrace();
         }

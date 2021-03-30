@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/main.evn bash
 
 mvn clean install
 
