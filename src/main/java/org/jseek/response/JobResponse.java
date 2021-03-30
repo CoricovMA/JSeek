@@ -20,7 +20,6 @@ public class JobResponse extends Response {
     }
 
     public void send(){
-        long execStart = System.currentTimeMillis();
         for(MessageEmbed embed: messageEmbedList){
             this.getEvent()
                     .getMessage()
@@ -28,8 +27,6 @@ public class JobResponse extends Response {
                     .sendMessage(embed)
                     .queue();
         }
-
-        System.out.println(String.format("Message send time: %s", System.currentTimeMillis()-execStart));
     }
 
 

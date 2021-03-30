@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/listeners/MessageListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/response/JobResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\apache-maven-3.6.3" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1gamj2ZsWe1BvGw1dkov0uMDSJp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,13 +72,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,49 +105,23 @@
       <workItem from="1609385439778" duration="460000" />
       <workItem from="1609540417356" duration="1503000" />
       <workItem from="1609600655935" duration="101000" />
+      <workItem from="1616977243256" duration="7376000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="184" key="#Project_Structure" timestamp="1601249284355">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="184" key="#Project_Structure/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601249284355" />
-    <state x="720" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601420499520">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="720" y="316" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601420499520" />
-    <state x="612" y="34" key="CommitChangelistDialog2" timestamp="1601249225466">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="612" y="34" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601249225466" />
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1609541352998">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609541352998" />
-    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1609541352998">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609541352998" />
-    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1609541352998">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609541352998" />
-    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1609541352998">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609541352998" />
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1609385600051">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1609385600051" />
-    <state x="342" y="101" key="new project wizard" timestamp="1601249695983">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="342" y="101" key="new project wizard/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1601249695983" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -173,7 +148,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
-          <line>17</line>
+          <line>31</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -225,6 +200,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/ScraperResponse/IndeedResponse.java</url>
           <line>69</line>
           <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/jseek/response/InfoResponse.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

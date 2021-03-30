@@ -12,3 +12,5 @@ buildNumber.properties
 .idea/workspace.xml
 /.idea/
 main.env
+
+env

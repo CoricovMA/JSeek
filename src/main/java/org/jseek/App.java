@@ -7,11 +7,25 @@ import org.jseek.jobs.JobStore;
 import org.jseek.listeners.MessageListeners;
 
 import javax.security.auth.login.LoginException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class App extends ListenerAdapter {
 
     private JobStore jobStore = JobStore.getInstance();
+    private static final String key = fetchKey();
+
+    private static String fetchKey() {
+        try {
+            return Files.readString(Paths.get("env"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 
     public static void main( String[] args ) throws IOException {
         startBot();
@@ -19,7 +33,7 @@ public class App extends ListenerAdapter {
 
     public static void startBot(){
         try {
-            JDA jda = JDABuilder.createDefault(System.getenv("DISC_BOT_KEY"))
+            JDA jda = JDABuilder.createDefault(key)
                     .addEventListeners(new MessageListeners())
                     .build();
         } catch (LoginException e) {
