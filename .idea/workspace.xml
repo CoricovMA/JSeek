@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44aef7e9-3906-4478-bd3b-be8cdcb1ce85" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuildScripts/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/BuildScripts/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +68,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,7 +99,8 @@
       <workItem from="1609385439778" duration="460000" />
       <workItem from="1609540417356" duration="1503000" />
       <workItem from="1609600655935" duration="101000" />
-      <workItem from="1616977243256" duration="7473000" />
+      <workItem from="1616977243256" duration="8166000" />
+      <workItem from="1617465805235" duration="4695000" />
     </task>
     <servers />
   </component>
@@ -118,6 +117,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -144,7 +144,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/App.java</url>
-          <line>31</line>
+          <line>30</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -189,7 +189,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/jseek/jobs/JobStore.java</url>
-          <line>35</line>
+          <line>67</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
